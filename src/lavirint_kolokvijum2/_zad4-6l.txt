@@ -1,0 +1,117 @@
+============================================================
+          Zadatak: pretrazivanje sa vracanjem
+============================================================
+
+Napisati program pod nazivom `NalazenjePuta` koji ucitava
+dole opisanu mapu iz fajla koji precizira korisnik i nad
+njom resava dati problem.
+
+
+Postavka problema
+============================================================
+
+(0) Nalazimo se u brdovitom kraju, i nakon dugog dana u prirodi, zelimo da
+se vratimo u kolibu da se odmorimo. Imamo kvadratnu mapu sa ucrtanim
+visinama polja i sa pozicijom kolibe, pa to nije problem. Medjutim
+posto smo umorni hteli bismo da izbegnemo penjanje po vrhovima i zato
+trazimo da li postoji takav put da je najvise jedno polje zaredom
+uzbrdo,odnosno da nikad ne prelazimo na polje sa vecom visinom vise od
+jednog polja zaredom, dok istih i nizih moze biti koliko god treba. 
+Sa jednog polja se moze preci na drugo, ukoliko imaju
+zajednicku stranicu, odnosno mozemo preci na polje levo,
+desno, gore ili dole.
+
+(1) Interesuje nas koliko ukupno ima puteva koji zadovoljavaju
+date uslove i da ispisemo na ekran bar jedan od njih,
+ukoliko takav postoji. Sacuvati sve puteve u odredjenu strukturu 
+po izboru (lista, niz). 
+
+(2) Dodatno, pored broja puteva, interesuje nas i koji je put optimalan. 
+Optimalan put u ovom slucaju je onaj put koji ima najmanje
+polja i ide uvek nizbrdo. Dakle, ako put ne ide nizbrdo, onda ga nije 
+ni potrebno uzimati u obzir kao kandidata za "optimalan". Ako ne postoji 
+optimalan put, ispisati odgovarajucu poruku. 
+
+(3) Vasa koliba nalazi se pored mocvare, odnosno, sva polja (tj. svi redovi) 
+koja/koji su na  matrici ispod kolibe tretiraju se kao mocvara u koju se 
+nikako ne sme ugaziti. Na primer, pogledajmo matricu u1 ili u2. U njoj se koliba 
+nalazi u poslednjem redu matrice, pa prakticno nema "mocvare". Medjutim, 
+u matrici u3 koliba se nalazi u 7. redu, te svi redovi/polja ispod tog reda nisu 
+dostupni za posetiti. Po tom principu, u matrici u4, poslednji red je "mocvara".
+
+Pocetno polje je na koordinatama 0,0, odnosno u gornjem
+levom uglu.
+
+
+Format fajla
+------------------------------------------------------------
+
+Mapa je u fajlu predstavljena na sledeci nacin:
+
+U prvom redu se nalaze dva broja S i V koji predstavljaju
+sirinu i visinu mape.
+
+U sledecih V redova se nalaze po S celih brojeva koji
+predstavljaju lavirint. Brojevi imaju sledece znacenje:
+
+ -1 - cilj puta
+
+bilo koji pozitivan broj predstavlja visinu tog polja.
+
+
+Primeri
+------------------------------------------------------------
+
+Za testiranje programa su dati fajlovi u*.txt
+
+U fajlu ub.txt nije moguce naci resenje. U fajlu u1.txt je
+sigurno moguce da se nadje resenje. Za ostale je nepoznato
+da li su resivi.
+
+Dat je i fajl "lav.txt" koji predstavlja lavirint kakav je
+radjen na vezbama i na kome se mogu testirati originalni
+algoritmi pre prilagodjavanja datom problemu. Nije neophodno
+raditi ovaj problem uopste.
+
+
+Zadatak
+============================================================
+
+Pretrazivanje sa vracanjem (14 poena)
+------------------------------------------------------------
+
+Ucitati mapu iz fajla cije ime unosi korisnik, resiti gore
+opisani problem i resenje ispisati na ekran.
+
+Putevi se mogu ispisivati kao liste polja (koordinata),
+u nekoj vizuelnoj formi na mapi ili na bilo koji drugi
+nacin iz koga se jasno moze videti put. 
+
+Za maksimalan broj poena se ocekuje da postoji neki
+jedinstveni objekat koji predstavlja put koji se generise.
+
+
+Bodovanje
+----------
+
+(0) 8 poena - nalazenje bilo kakvog puta sa odgovarajucim
+strukturama (odgovor na pitanje: da li postoji put?)
+
+(1) 8 poena - nalazenje "svih" puteva u skladu sa datim pravilima
+(odgovor na pitanje: koliko ukupno ima puteva?)
+
+(2) 5 poena - nalazenje optimalnog puta
+
+(3) 7 poena - put ne sme da prodje kroz red koji predstavlja 
+"mocvaru"
+
+Stil programiranja (2 poen)
+------------------------------------------------------------
+
+Pri pisanju programa obratiti paznju na stil, sto ukljucuje
+organizaciju koda u klase i metode, vidljivost polja u
+klasama, uredno formatiranje koda, logicna imena klasa,
+metoda i polja u skladu sa standardima jezika Java.
+
+Od programa se, naravno, ocekuje da radi nesto - tj da
+glavni program nije prazan.
